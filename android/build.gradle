@@ -22,10 +22,14 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    // 添加 namespace，替换为实际的包名
+    namespace 'com.amap.flutter.location'
+
+    compileSdkVersion 34
 
     defaultConfig {
-        minSdkVersion 16
+        targetSdkVersion 34 // 更新为 34
+        minSdkVersion 21 // 保持在合适的值
     }
     lintOptions {
         disable 'InvalidPackage'
